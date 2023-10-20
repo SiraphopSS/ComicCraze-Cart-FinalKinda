@@ -82,6 +82,7 @@ const handleDelete = async () => {
       'ขออภัย ไม่สามารถลบหนังสือออกจากตะกร้าได้'
     );
   }
+  setDeletePopupOpen(false);
 }
 
 const handleDeleteClick = (val: number) => {
@@ -211,6 +212,8 @@ useEffect(() => {
               </Button>
             </Link>
             </Col>
+            <Button type="primary" onClick={() => handleDeleteClick(1)}> Delete Basket 1 </Button>
+            <Button type="primary" onClick={() => handleDeleteClick(2)}> Delete Basket 2 </Button>
           </Row>
       </Layout>
     </>
